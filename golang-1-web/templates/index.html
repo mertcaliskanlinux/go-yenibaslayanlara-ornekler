@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayda</title>
+</head>
+<body>
+    <br><br>
+<table border="1">
+        
+        <th>Numara</th>
+        <th>SözSahibi</th>
+        <th>Zaman</th>
+        <th>Patlak Söz</th>
+            {{ range $DiziIndisi, $DiziElemani := . }}
+            <tr>
+                <td>{{ $DiziIndisi }}</td>
+                <td>{{ $DiziElemani.Söyleyen }}</td>
+                <td>{{ $DiziElemani.Zaman }}</td>
+                <td>{{ $DiziElemani.Cümle }}</td>
+            </tr>
+            {{ end }}
+</table>
+</body>
+</html>
